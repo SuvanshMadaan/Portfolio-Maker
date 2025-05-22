@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Maker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Portfolio Maker</h1>
+    <form id="portfolioForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="title" placeholder="Your Title" required />
+      <textarea id="about" placeholder="About You" required></textarea>
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="softSkills" placeholder="Soft Skills (comma separated)" required></textarea>
+      <textarea id="techSkills" placeholder="Technical Skills (comma separated)" required></textarea>
+      <input type="text" id="project1" placeholder="Project 1 - Description" required />
+      <input type="text" id="project2" placeholder="Project 2 - Description" required />
+      <textarea id="hobbies" placeholder="Hobbies (comma separated)" required></textarea>
+      <button type="submit">Generate Portfolio</button>
+    </form>
+  </div>
+
+  <div id="portfolio" class="portfolio hidden">
+    <header>
+      <h1 id="displayName"></h1>
+      <p id="displayTitle"></p>
+    </header>
+    <section>
+      <h2>About Me</h2>
+      <p id="displayAbout"></p>
+    </section>
+    <section>
+      <h2>Soft Skills</h2>
+      <ul id="displaySoftSkills"></ul>
+    </section>
+    <section>
+      <h2>Technical Skills</h2>
+      <ul id="displayTechSkills"></ul>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li id="displayProject1"></li>
+        <li id="displayProject2"></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Hobbies</h2>
+      <ul id="displayHobbies"></ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <span id="displayEmail"></span></p>
+    </section>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button onclick="downloadPortfolio()">Download Portfolio</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
